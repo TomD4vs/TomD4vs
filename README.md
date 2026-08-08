@@ -4,7 +4,7 @@
 
 <br>
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Sobre mim
+## <img height="14" src="./icons/mark.svg" alt="" /> Sobre mim
 
 Desenvolvedor full stack há três anos, com foco em sistemas de gestão
 internos. Atuo no ciclo completo de aplicações web, do modelo de dados
@@ -16,7 +16,7 @@ além de projetos de menor porte em React e Express.
 
 Atualmente aprofundo conhecimentos em testes automatizados e Docker.
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Stack
+## <img height="14" src="./icons/mark.svg" alt="" /> Stack
 
 **Principais tecnologias**
 
@@ -30,12 +30,12 @@ Atualmente aprofundo conhecimentos em testes automatizados e Docker.
 
 <img height="15" src="./icons/git.svg" alt="" /> Git &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/github-actions.svg" alt="" /> GitHub Actions &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/docker.svg" alt="" /> Docker &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/postman.svg" alt="" /> Postman &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/dbeaver.svg" alt="" /> DBeaver
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Estatísticas
+## <img height="14" src="./icons/mark.svg" alt="" /> Estatísticas
 
 <img width="100%" src="https://raw.githubusercontent.com/TomD4vs/TomD4vs/output/stats.svg" alt="Repositórios, estrelas, seguidores e distribuição de linguagens" />
 
 <img width="100%" src="https://raw.githubusercontent.com/TomD4vs/TomD4vs/output/snake.svg" alt="Gráfico de contribuições do último ano" />
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Contato
+## <img height="14" src="./icons/mark.svg" alt="" /> Contato
 
 <p><a href="https://www.linkedin.com/in/elyton-moreira-320232132/"><img height="40" src="./btn-linkedin.svg" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="mailto:elyton.moreira163@gmail.com?subject=Contato%20via%20GitHub"><img height="40" src="./btn-email.svg" alt="Fale comigo por e-mail" /></a></p>

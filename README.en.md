@@ -4,7 +4,7 @@
 
 <br>
 
-## <img height="10" src="./icons/mark.svg" alt="" /> About
+## <img height="14" src="./icons/mark.svg" alt="" /> About
 
 Full stack developer with three years of experience, focused on internal
 management systems. I work across the full lifecycle of web applications,
@@ -16,7 +16,7 @@ Node.js, along with smaller projects in React and Express.
 
 I am currently deepening my knowledge of automated testing and Docker.
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Stack
+## <img height="14" src="./icons/mark.svg" alt="" /> Stack
 
 **Core technologies**
 
@@ -30,12 +30,12 @@ I am currently deepening my knowledge of automated testing and Docker.
 
 <img height="15" src="./icons/git.svg" alt="" /> Git &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/github-actions.svg" alt="" /> GitHub Actions &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/docker.svg" alt="" /> Docker &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/postman.svg" alt="" /> Postman &nbsp;&nbsp;&nbsp; <img height="15" src="./icons/dbeaver.svg" alt="" /> DBeaver
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Statistics
+## <img height="14" src="./icons/mark.svg" alt="" /> Statistics
 
 <img width="100%" src="https://raw.githubusercontent.com/TomD4vs/TomD4vs/output/stats-en.svg" alt="Repositories, stars, followers and language distribution" />
 
 <img width="100%" src="https://raw.githubusercontent.com/TomD4vs/TomD4vs/output/snake.svg" alt="Contribution graph for the last year" />
 
-## <img height="10" src="./icons/mark.svg" alt="" /> Contact
+## <img height="14" src="./icons/mark.svg" alt="" /> Contact
 
 <p><a href="https://www.linkedin.com/in/elyton-moreira-320232132/"><img height="40" src="./btn-linkedin.svg" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="mailto:elyton.moreira163@gmail.com?subject=Contact%20via%20GitHub"><img height="40" src="./btn-email-en.svg" alt="Get in touch by email" /></a></p>
