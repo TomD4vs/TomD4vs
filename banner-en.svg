@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-label="Elyton Moreira, full stack developer. PHP, Laravel, Vue.js, PostgreSQL.">
+  <defs>
+    <style>
+      .name { font: 600 66px 'Segoe UI Variable Display','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; letter-spacing: -2px; fill: #EDEBE7; }
+      .role { font: 500 12.5px 'Cascadia Code','SF Mono','JetBrains Mono',Consolas,monospace; letter-spacing: 4.6px; fill: #78746E; }
+      .item { font: 400 14px 'Cascadia Code','SF Mono','JetBrains Mono',Consolas,monospace; letter-spacing: .4px; fill: #A5A099; text-anchor: end; }
+
+      /* entrada escalonada: revela na ordem de leitura, uma vez */
+      .r { opacity: 0; animation: rise .55s cubic-bezier(.16,1,.3,1) forwards; }
+      .r2 { animation-delay: .10s } .r3 { animation-delay: .18s }
+      .r4 { animation-delay: .24s } .r5 { animation-delay: .30s }
+      .r6 { animation-delay: .36s } .r7 { animation-delay: .42s }
+      @keyframes rise { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: translateY(0) } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .r { opacity: 1; animation: none; transform: none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="260" fill="#0C0C0D"/>
+
+  <text class="name r" x="80" y="150">Elyton Moreira<tspan fill="#D96F4B">.</tspan></text>
+  <text class="role r r2" x="83" y="188">FULL STACK DEVELOPER</text>
+
+  <line x1="820" y1="76" x2="820" y2="212" stroke="#232326" stroke-width="1"/>
+
+  <text class="item r r4" x="1120" y="100">PHP</text>
+  <text class="item r r5" x="1120" y="132">Laravel</text>
+  <text class="item r r6" x="1120" y="164">Vue.js</text>
+  <text class="item r r7" x="1120" y="196">PostgreSQL</text>
+</svg>

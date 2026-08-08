@@ -1,5 +1,5 @@
 // Gera um card de estatisticas em SVG, na mesma linguagem visual do banner.
-// Uso: node scripts/stats.mjs dist/stats.svg
+// Uso: node scripts/stats.mjs dist/stats.svg [pt|en]
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
@@ -7,6 +7,30 @@ import { dirname } from "node:path";
 const USER = process.env.PROFILE_USER || "TomD4vs";
 const TOKEN = process.env.GITHUB_TOKEN;
 const OUT = process.argv[2] || "dist/stats.svg";
+const LANG = process.argv[3] === "en" ? "en" : "pt";
+
+const T = {
+  pt: {
+    locale: "pt-BR",
+    decimal: ",",
+    repos: "REPOSITÓRIOS",
+    stars: "ESTRELAS",
+    followers: "SEGUIDORES",
+    commits: "COMMITS (12 MESES)",
+    other: "Outras",
+    aria: (u) => `Estatisticas do GitHub de ${u}`,
+  },
+  en: {
+    locale: "en-US",
+    decimal: ".",
+    repos: "REPOSITORIES",
+    stars: "STARS",
+    followers: "FOLLOWERS",
+    commits: "COMMITS (12 MONTHS)",
+    other: "Other",
+    aria: (u) => `GitHub statistics for ${u}`,
+  },
+}[LANG];
 
 const C = {
   bg: "#0C0C0D",
@@ -20,7 +44,7 @@ const C = {
 const SANS = "'Segoe UI Variable Display','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif";
 const MONO = "'Cascadia Code','SF Mono','JetBrains Mono',Consolas,monospace";
 
-const fmt = new Intl.NumberFormat("pt-BR");
+const fmt = new Intl.NumberFormat(T.locale);
 const esc = (s) =>
   String(s).replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
 
@@ -111,7 +135,7 @@ function render({ metrics, languages }) {
     const significant = languages.filter(([, bytes]) => bytes / total >= 0.01);
     const top = significant.slice(0, 5);
     const restBytes = total - top.reduce((sum, [, b]) => sum + b, 0);
-    const slices = restBytes / total >= 0.01 ? [...top, ["Outras", restBytes]] : top;
+    const slices = restBytes / total >= 0.01 ? [...top, [T.other, restBytes]] : top;
     const shown = slices.reduce((sum, [, b]) => sum + b, 0);
 
     let cursor = M;
@@ -127,7 +151,7 @@ function render({ metrics, languages }) {
     let lx = M;
     legend = slices
       .map(([name, bytes], i) => {
-        const pct = ((bytes / shown) * 100).toFixed(1).replace(".", ",");
+        const pct = ((bytes / shown) * 100).toFixed(1).replace(".", T.decimal);
         const text = `${name} ${pct}%`;
         const width = 16 + text.length * 7.3 + 34;
         if (lx + width > W - M) return ""; // nao deixa a legenda vazar do card
@@ -140,7 +164,7 @@ function render({ metrics, languages }) {
       .join("\n");
   }
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Estatisticas do GitHub de ${esc(USER)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T.aria(USER))}">
   <rect width="${W}" height="${H}" fill="${C.bg}"/>
 
 ${cells}
@@ -167,12 +191,12 @@ const languages = await languageBytes(repos);
 const stars = repos.reduce((sum, r) => sum + r.stargazers_count, 0);
 
 const metrics = [
-  { value: fmt.format(repos.length), label: "REPOSITÓRIOS" },
-  { value: fmt.format(stars), label: "ESTRELAS" },
-  { value: fmt.format(user.followers), label: "SEGUIDORES" },
+  { value: fmt.format(repos.length), label: T.repos },
+  { value: fmt.format(stars), label: T.stars },
+  { value: fmt.format(user.followers), label: T.followers },
 ];
 if (commits !== null) {
-  metrics.push({ value: fmt.format(commits), label: "COMMITS (12 MESES)" });
+  metrics.push({ value: fmt.format(commits), label: T.commits });
 }
 
 await mkdir(dirname(OUT), { recursive: true });

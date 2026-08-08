@@ -21,10 +21,12 @@ jobs:
 
       # Precisa vir antes da cobrinha: a action da cobrinha roda em Docker como
       # root e criaria dist/ sem permissao de escrita para o usuario runner.
-      - name: Gerar o card de estatisticas
+      - name: Gerar os cards de estatisticas
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/stats.mjs dist/stats.svg
+        run: |
+          node scripts/stats.mjs dist/stats.svg pt
+          node scripts/stats.mjs dist/stats-en.svg en
 
       - name: Gerar a cobrinha
         uses: Platane/snk@v3

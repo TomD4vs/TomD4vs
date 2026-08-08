@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="28" viewBox="0 0 82 28" role="img" aria-label="Português, idioma atual">
+  <rect width="82" height="28" rx="6" fill="#D96F4B"/>
+  <g transform="translate(12 6)" fill="none" stroke="#0C0C0D" stroke-width="1.4">
+    <circle cx="8" cy="8" r="7"/>
+    <ellipse cx="8" cy="8" rx="3.2" ry="7"/>
+    <line x1="1" y1="8" x2="15" y2="8"/>
+  </g>
+  <text x="34" y="18" font-family="'Cascadia Code','SF Mono','JetBrains Mono',Consolas,monospace" font-size="12" letter-spacing=".3" fill="#0C0C0D">PT-BR</text>
+</svg>
