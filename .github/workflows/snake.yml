@@ -19,17 +19,19 @@ jobs:
         with:
           node-version: 20
 
+      # Precisa vir antes da cobrinha: a action da cobrinha roda em Docker como
+      # root e criaria dist/ sem permissao de escrita para o usuario runner.
+      - name: Gerar o card de estatisticas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/stats.mjs dist/stats.svg
+
       - name: Gerar a cobrinha
         uses: Platane/snk@v3
         with:
           github_user_name: TomD4vs
           outputs: |
             dist/snake.svg?color_snake=#D96F4B&color_dots=#0C0C0D,#3a2018,#7a3823,#b05334,#D96F4B
-
-      - name: Gerar o card de estatisticas
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/stats.mjs dist/stats.svg
 
       - name: Publicar na branch output
         uses: crazy-max/ghaction-github-pages@v4
