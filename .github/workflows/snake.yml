@@ -1,8 +1,8 @@
-name: Generate Snake
+name: Gerar assets do perfil
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -13,13 +13,23 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Gerar a animacao
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Gerar a cobrinha
         uses: Platane/snk@v3
-        id: snake-gif
         with:
           github_user_name: TomD4vs
           outputs: |
             dist/snake.svg?color_snake=#D96F4B&color_dots=#0C0C0D,#3a2018,#7a3823,#b05334,#D96F4B
+
+      - name: Gerar o card de estatisticas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/stats.mjs dist/stats.svg
 
       - name: Publicar na branch output
         uses: crazy-max/ghaction-github-pages@v4

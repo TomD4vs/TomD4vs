@@ -22,20 +22,17 @@ Estudando **Docker**, **TypeScript** e testes automatizados.
 PHP, Laravel, Vue.js, PostgreSQL
 
 **Também desenvolvo em**
-JavaScript, React, Node.js, Express, HTML, CSS
+JavaScript, React, Node.js, Express, HTML, CSS, Testes Unitários
 
 **Ferramentas**
 Git, Docker, PostMan, DBeaver
 
 ### Números
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=TomD4vs&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0C0C0D&title_color=D96F4B&icon_color=D96F4B&text_color=A5A099" alt="Estatísticas do GitHub" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TomD4vs&layout=compact&hide_border=true&langs_count=6&bg_color=0C0C0D&title_color=D96F4B&text_color=A5A099" alt="Linguagens mais usadas" />
+<img width="100%" src="https://raw.githubusercontent.com/TomD4vs/TomD4vs/output/stats.svg" alt="Repositórios, estrelas, seguidores e distribuição de linguagens" />
 
 <img src="https://raw.githubusercontent.com/TomD4vs/TomD4vs/output/snake.svg" alt="Gráfico de contribuições" />
 
 ### Contato
 
-[<img src="https://cdn.simpleicons.org/linkedin/A5A099" height="16" alt="" />&nbsp; LinkedIn](https://www.linkedin.com/in/elyton-moreira-320232132/)
-&nbsp;&nbsp;&nbsp;
-[<img src="https://cdn.simpleicons.org/github/A5A099" height="16" alt="" />&nbsp; Abrir uma issue](https://github.com/TomD4vs/TomD4vs/issues/new)
+<p><a href="https://www.linkedin.com/in/elyton-moreira-320232132/"><img height="40" src="./btn-linkedin.svg" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="https://github.com/TomD4vs/TomD4vs/issues/new"><img height="40" src="./btn-issue.svg" alt="Abrir uma issue" /></a></p>
